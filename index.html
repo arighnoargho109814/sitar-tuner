@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Mobile responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- App theme -->
+    <meta name="theme-color" content="#21130c">
+
+    <!-- PWA manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Page title -->
+    <title>Sitar Tuner</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header>
+            <div class="music-icon">🎵</div>
+            <h1>SITAR TUNER</h1>
+            <p>Indian Classical String Tuner</p>
+        </header>
+
+        <section class="reference-card">
+            <h2>CUSTOM SITAR TUNING</h2>
+            <p>Use the exact tuning system for your Sitar.</p>
+        </section>
+
+        <!-- STRING SELECTOR -->
+        <section class="selector-card">
+
+            <label for="stringSelect">SELECT STRING</label>
+
+            <select id="stringSelect">
+
+                <option value="0">
+                    String 1 — Ma — G — 194 Hz
+                </option>
+
+                <option value="1">
+                    String 2 — Sa — D — 145 Hz
+                </option>
+
+                <option value="2">
+                    String 3 — Pa — Lower A — 109 Hz
+                </option>
+
+                <option value="3">
+                    String 4 — Sa — Lower D — 72 Hz
+                </option>
+
+                <option value="4">
+                    Chikari 1 — Pa — Higher A — 218 Hz
+                </option>
+
+                <option value="5">
+                    Chikari 2 — Sa — D — 290 Hz
+                </option>
+
+                <option value="6">
+                    Chikari 3 — Sa — Higher D — 580 Hz
+                </option>
+
+            </select>
+
+        </section>
+
+        <!-- TARGET -->
+        <section class="target-card">
+
+            <div class="target-title">
+                TARGET
+            </div>
+
+            <div class="target-info">
+
+                <div>
+                    <span>STRING</span>
+                    <strong id="stringName">String 1</strong>
+                </div>
+
+                <div>
+                    <span>SWARA</span>
+                    <strong id="swara">Ma</strong>
+                </div>
+
+                <div>
+                    <span>NOTE</span>
+                    <strong id="note">G</strong>
+                </div>
+
+                <div>
+                    <span>FREQUENCY</span>
+                    <strong>
+                        <span id="targetFrequency">194.00</span> Hz
+                    </strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- TUNER -->
+        <section class="tuner-card">
+
+            <div class="frequency-display">
+
+                <span>DETECTED FREQUENCY</span>
+
+                <div>
+                    <strong id="detectedFrequency">--.--</strong>
+                    <span>Hz</span>
+                </div>
+
+            </div>
+
+
+            <!-- NEEDLE -->
+            <div class="meter">
+
+                <div class="scale">
+
+                    <span>-50</span>
+                    <span>-25</span>
+                    <span>0</span>
+                    <span>+25</span>
+                    <span>+50</span>
+
+                </div>
+
+                <div class="needle-area">
+
+                    <div class="center-line"></div>
+
+                    <div id="needle" class="needle"></div>
+
+                </div>
+
+                <div class="meter-labels">
+
+                    <span>FLAT</span>
+
+                    <span>IN TUNE</span>
+
+                    <span>SHARP</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- CENTS -->
+            <div class="cents-box">
+
+                <span>CENTS</span>
+
+                <strong id="cents">0</strong>
+
+            </div>
+
+
+            <!-- STATUS -->
+            <div id="status" class="status">
+                READY
+            </div>
+
+        </section>
+
+
+        <!-- START BUTTON -->
+        <button id="startButton">
+            🎤 START TUNER
+        </button>
+
+        <div id="micStatus" class="mic-status">
+            Microphone not started
+        </div>
+
+
+        <!-- INSTRUCTIONS -->
+        <section class="instructions">
+
+            <h2>HOW TO USE</h2>
+
+            <ol>
+
+                <li>Select the Sitar string.</li>
+
+                <li>Click <b>START TUNER</b>.</li>
+
+                <li>Pluck the selected string clearly.</li>
+
+                <li>Watch the frequency and needle.</li>
+
+                <li>Adjust the string until the needle reaches the center.</li>
+
+                <li>The status will show <b>IN TUNE</b> when you are close.</li>
+
+            </ol>
+
+        </section>
+
+
+        <footer>
+            Sitar Tuner • Custom Indian Classical Tuning
+        </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
